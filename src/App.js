@@ -8,7 +8,7 @@ const App = () => {
   return (
     <>
       <NavBar/>
-      <Header saludo="Buen dia!"/>
+      <Header saludo="Catalogo de productos"/>
       <Main/>
       <Footer/>
     </>
