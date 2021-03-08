@@ -1,0 +1,62 @@
+ 
+  const [contador, setContador] = useState(0)
+  useEffect(() => {
+    if (contador > 5){
+      console.log("pasaste de 5")
+    }
+  })
+  const aumentarContador = () => {
+    setContador(contador + 1)
+  }
+  const restarContador = () => {
+    if (contador > 0) {
+      setContador(contador - 1)
+    } else {
+      setContador(0)
+    }
+    
+  }
+  const resetearContador = () => {
+    setContador(0)
+  }
+    
+    <Contador 
+    contador={contador}
+    restarContador={restarContador}
+    resetearContador={resetearContador}
+    aumentarContador={aumentarContador}
+    />
+
+    //Promesa clase 6
+    const promise = new Promise((resolver, rechazar) => {
+        setTimeout(() => {
+          let codigo = 200;
+          let nombre = ["uno", "dos", "tres"];
+          let precio = [2300, 400, 299];
+          console.log("terminó el pedido")
+          if (codigo < 300) {
+              resolver([nombre, precio])                
+          } else {
+              rechazar("El código es mayor a 300")
+          }    
+        }, 2000)
+      })
+    promise
+    .then((data) => {     
+      console.log(data) 
+      const newPromise = new Promise((resolver, rechazar) => {
+        setTimeout(() => {
+            resolver([4,6,8])
+            console.log("termino la segunda promesa")
+        }, 2000)
+      })
+      return newPromise
+    })
+    .then((respuesta) => {
+        console.log(respuesta);
+    })
+    .catch(() => {
+        console.log("Hubo un error")
+    })
+    // Fin promesa
+

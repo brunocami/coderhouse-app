@@ -1,45 +1,30 @@
 import React from 'react'
+import { Route } from 'react-router-dom'
+import Productos from './productos'
+import Ofertas from './ofertas'
+import Home from './home'
+import Contacto from './contacto'
 
 const Main = () => {
+
     return (
-       <div class="row row-cols-1 row-cols-md-3 g-4">
-        <div class="col">
-        <div class="card">
-            <img src="/img/product.png" class="card-img-top" alt="..." />
-            <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            </div>
-        </div>
-        </div>
-        <div class="col">
-        <div class="card">
-            <img src="/img/product.png" class="card-img-top" alt="..." />
-            <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            </div>
-        </div>
-        </div>
-        <div class="col">
-        <div class="card">
-            <img src="/img/product.png" class="card-img-top" alt="..." />
-            <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
-            </div>
-        </div>
-        </div>
-        <div class="col">
-        <div class="card">
-            <img src="/img/product.png" class="card-img-top" alt="..." />
-            <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            </div>
-        </div>
-        </div>
-        </div>
+        <main>
+            <Route exact path="/">
+                <Home/>
+            </Route>
+
+            <Route path="/productos">
+                <Productos/>
+            </Route>
+
+            <Route path="/ofertas">
+                <Ofertas/>
+            </Route>
+
+            <Route path="/contacto">
+                <Contacto/>
+            </Route>
+        </main>
     )
 }
 

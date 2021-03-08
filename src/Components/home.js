@@ -1,13 +1,12 @@
 import React from 'react'
 
-const Header = (props) => {
+const Home = () => {
 
     return (
         <div>
             <h1>Hola mundo!</h1>
-            <p>{props.saludo}</p>
         </div>
     )
 }
 
-export default Header
+export default Home
