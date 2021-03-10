@@ -4,6 +4,7 @@ import Productos from './productos'
 import Ofertas from './ofertas'
 import Home from './home'
 import Contacto from './contacto'
+import Item from './item'
 
 const Main = () => {
 
@@ -23,6 +24,10 @@ const Main = () => {
 
             <Route path="/contacto">
                 <Contacto/>
+            </Route>
+
+            <Route path="/producto/:id">
+                <Item/>
             </Route>
         </main>
     )
